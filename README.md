@@ -524,3 +524,29 @@ MainActivity.kt
 
 
 
+
+
+
+## 5. Краткие сведения
+
+ * RecyclerView виджет помогает отображать список данных.
+
+ * RecyclerView использует шаблон адаптера для адаптации и отображения данных.
+
+ * ViewHolder создает и сохраняет просмотры дляRecyclerView.
+
+ * RecyclerView поставляется со встроеннымиLayoutManagers. RecyclerView делегирует способ размещения элементовLayoutManagers.
+
+Для реализации адаптера:
+
+ * Создайте новый класс для адаптера, например, ItemAdapter.
+
+ * Создайте пользовательский ViewHolder класс, представляющий представление одного элемента списка. Расширяйте из RecyclerView.ViewHolder класса.
+
+ * Измените ItemAdapter класс, чтобы расширить его на основеRecyclerView.Adapter класс с помощью пользовательского ViewHolder класса.
+
+ * Реализуйте эти методы в адаптере: getItemsCount(), onCreateViewHolder() и onBindViewHolder().
+
+
+
+
