@@ -751,34 +751,34 @@ list_item.xml
 
 list_item.xml
 
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp">
-
-    <LinearLayout
+    <?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/item_image"
+        android:layout_margin="8dp">
+    
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="194dp"
-            android:importantForAccessibility="no"
-            android:scaleType="centerCrop" />
-
-        <TextView
-            android:id="@+id/item_title"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-    </LinearLayout>
-
-</com.google.android.material.card.MaterialCardView>
+            android:orientation="vertical">
+    
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop" />
+    
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+    
+        </LinearLayout>
+        
+    </com.google.android.material.card.MaterialCardView>
 
 ![image](https://github.com/gipnozhard/Affirmations/assets/71705375/ca5233a1-d125-4ebc-bdfd-b0f13e5b6607)
 
