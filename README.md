@@ -705,6 +705,96 @@ ItemAdapter.kt
 Приложение выглядит намного красивее с изображениями! Тем не менее, вы все еще можете улучшить пользовательский интерфейс приложения. В следующем разделе вы внесете небольшие изменения в приложение, чтобы улучшить пользовательский интерфейс.
 
 
+ ## 3. Доработка пользовательского интерфейса
+
+На данный момент вы создали функциональное приложение, состоящее из списка строк подтверждения и изображений. В этом разделе вы увидите, как небольшие изменения в коде и XML могут сделать приложение более отточенным.
+
+ ### Добавление отступов
+
+Для начала добавьте немного пробелов между элементами списка.
+
+--------------------------------------------------------------
+Совет: Вы можете внести изменения в формат XML, как показано здесь, или вы можете внести их на панели Атрибутов в режиме Дизайна, в зависимости от того, что вы предпочитаете.
+--------------------------------------------------------------
+
+ 1. Откройте item_list.xml (приложение> разрешение> макет> item_list.xml ) и добавьте 16dp дополнение к существующему LinearLayout.
+
+list_item.xml
+
+![image](https://github.com/gipnozhard/Affirmations/assets/71705375/c7b39666-98d1-456b-8808-0e71b5804986)
+
+ 2. Добавьте 16dp дополнение к item_title TextView.
+
+ 3. В TextViewзадайте textAppearance атрибуту значение ?attr/textAppearanceHeadline6. textAppearance это атрибут, который позволяет вам определять стиль, специфичный для текста. Другие возможные предопределенные значения внешнего вида текста вы можете найти в разделе TextAppearances в этом блоге, посвященном общим атрибутам темы.
+
+![image](https://github.com/gipnozhard/Affirmations/assets/71705375/b7642499-396d-4d2b-bd99-09d490e5f5df)
+
+ 4. Запустите приложение. Как вы думаете, список выглядит лучше?
+
+![image](https://github.com/gipnozhard/Affirmations/assets/71705375/e5310333-7d15-427f-8da1-884358f3e2e8)
+
+ ### Использование карточек
+
+По-прежнему сложно определить, относится ли изображение к тексту аффирмации выше или ниже этого изображения. Чтобы исправить это, вы можете использовать просмотр карточек. Представление карточек обеспечивает простой способ размещения группы изображений, обеспечивая при этом единый стиль контейнера. Дополнительные рекомендации по использованию карточек в Material Design см. в этом руководстве по картам.
+
+ 1. Добавьте MaterialCardView вокруг существующих LinearLayout.
+
+ 2. Еще раз переместите объявление схемы из LinearLayout в MaterialCardView.
+ 
+ 3. Установите для layout_width из MaterialCardView match_parentзначение layout_height и wrap_content в, а для,,в,,.
+
+ 4. Добавьте layout_margin из 8dp.
+
+ 5. Удалите отступы в LinearLayout, чтобы у вас не было слишком много пробелов.
+
+ 6. Теперь запустите приложение еще раз. Можете ли вы лучше различать каждое утверждение с помощью MaterialCardView?
+
+list_item.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+![image](https://github.com/gipnozhard/Affirmations/assets/71705375/ca5233a1-d125-4ebc-bdfd-b0f13e5b6607)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
